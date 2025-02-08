@@ -51,6 +51,7 @@ public static class DependencyInjection
                 {
                     ValidateIssuer = true,
                     ValidateAudience = true,
+                    ClockSkew = TimeSpan.Zero,
                     ValidateLifetime = true,
                     ValidateIssuerSigningKey = true,
                     ValidIssuer = jwtSettings.Issuer,
@@ -71,7 +72,12 @@ public static class DependencyInjection
                         {
                             context.Response.StatusCode = (int)HttpStatusCode.Unauthorized;
 
-                            result = JsonConvert.SerializeObject(new { message = "Token expired." });
+                            result = JsonConvert.SerializeObject(new
+                            {
+                                message = "Token is expired.",
+                                statusCode = (int)HttpStatusCode.Unauthorized,
+                                status = "Unauthorized"
+                            });
                         }
                         // or internal error.
                         else
