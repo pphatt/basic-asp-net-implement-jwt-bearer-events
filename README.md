@@ -138,3 +138,9 @@ The only way to get a valid admin token would be to either:
 * Somehow have your server's secret key (which would be a serious security breach).
 
 **Note:** This is also why you should never store sensitive information in a JWT payload—while it can be decoded and read, **the signature mechanism prevents it from being tampered with**.
+
+# Reference:
+
+- [ASP.NET Authentication: JWT-Bearer events](https://medium.com/@diver.stv/asp-net-authentication-jwt-bearer-events-8efcbe615596)
+- [JwtBearerEvents in ASP.NET Core: Managing Token Events](https://medium.com/@sametkarademir244/jwtbearerevents-in-asp-net-core-managing-token-events-04cdeb9dc30d)
+- [Jwt bearer event asp.net core](https://www.google.com/search?q=jwt+bearer+event+asp.net+core&oq=jwt+bearer+event+asp.net+core&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIGCAEQRRhA0gEINjA2OGowajGoAgCwAgA&sourceid=chrome&ie=UTF-8)
